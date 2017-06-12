@@ -12,6 +12,13 @@ it('should add two numbers', () => {
   // }
 });
 
+it('should async two number', (done) => {
+  utils.asyncAdd (4, 3, (sum) => {
+    expect(sum).toBe(7).toBeA('number');
+    done();
+  });
+});
+
 
 it('should squre a number', () => {
 
